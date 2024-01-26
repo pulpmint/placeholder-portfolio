@@ -1,3 +1,25 @@
+---
+import {
+  AWARDS,
+  COPYRIGHT,
+  DESC,
+  EXPERIENCES,
+  FAQS,
+  GREETINGS,
+  HASHNODE,
+  MAIL,
+  MAIL_TO,
+  MORE_QUESTIONS,
+  PIXEL_PERFECT,
+  PROJECTS,
+  SKILLS,
+  SOCIALS,
+  TITLE,
+  USERNAME,
+  YEAR,
+} from "@/constants/data";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,13 +28,191 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <title>Manmohan Singh - Building things for the Web</title>
-    <meta
-      name="description"
-      content="Frontend developer based in India. Working with JavaScript & Figma. Building things for the Web."
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <title>{TITLE}</title>
+    <meta name="description" content={DESC} />
   </head>
+
   <body>
-    <p>Manmohan Singh - Building things for the Web</p>
+    <header>
+      <p>👤 ABOUT</p>
+      <hr />
+      <p>
+        {GREETINGS}
+      </p>
+      <p>
+        {DESC}
+      </p>
+      <p>
+        {PIXEL_PERFECT}
+      </p>
+      <a href={HASHNODE.LINK} target="_blank" rel="noopener noreferrer">
+        {HASHNODE.OPTIONAL}
+      </a>
+    </header>
+
+    <main>
+      <section>
+        <h3>💻 WORK</h3>
+        <hr />
+        {
+          PROJECTS.map(({ LABEL, LINK, YEAR }) => (
+            <p class="flex space-between">
+              <span>
+                -
+                <a href={LINK} target="_blank" rel="noopener noreferrer">
+                  {LABEL}
+                </a>
+              </span>
+              <span>{YEAR}</span>
+            </p>
+          ))
+        }
+      </section>
+
+      <section>
+        <h4>💼 EXPERIENCES</h4>
+        <hr />
+        {
+          EXPERIENCES.map(({ DESG, LABEL, YEAR }) => (
+            <p class="flex space-between">
+              <span>
+                - <strong>{LABEL}</strong>
+                <br />
+                &nbsp; {DESG}
+              </span>
+              <span>{YEAR}</span>
+            </p>
+          ))
+        }
+      </section>
+
+      <section>
+        <h4>🏆 AWARDS & RECOGNITION</h4>
+        <hr />
+        {
+          AWARDS.map(({ AWARD, LABEL, LINK, YEAR }) => (
+            <p class="flex space-between">
+              <span>
+                -
+                <a href={LINK} target="_blank" rel="noopener noreferrer">
+                  <strong>{AWARD}</strong>
+                </a>
+                <br />
+                &nbsp; {LABEL}
+              </span>
+              <span>{YEAR}</span>
+            </p>
+          ))
+        }
+      </section>
+
+      <section>
+        <h4>🔨 SKILLS</h4>
+        <hr />
+        {SKILLS.map((skill) => <p>- {skill}</p>)}
+      </section>
+
+      <section>
+        <h4>🌐 SOCIALS</h4>
+        <hr />
+        {
+          SOCIALS.map(({ LABEL, LINK }) => (
+            <p class="flex space-between">
+              <span>- {LABEL}</span>
+              <a href={LINK} target="_blank" rel="noopener noreferrer">
+                @{USERNAME}
+              </a>
+            </p>
+          ))
+        }
+      </section>
+
+      <section>
+        <h4>🙋 FAQS</h4>
+        <hr />
+        {
+          FAQS.map(({ q, a }) => (
+            <p>
+              <span class="flex">
+                <span>Q:&nbsp;</span>
+                <span>{q}</span>
+              </span>
+              <span class="flex">
+                <span>A:&nbsp;</span>
+                <span>{a}</span>
+              </span>
+            </p>
+          ))
+        }
+        <p>
+          <span class="flex">
+            <span>Q:&nbsp;</span>
+            <span>{MORE_QUESTIONS}</span>
+          </span>
+          <span class="flex">
+            <span>A:&nbsp;</span>
+            <span>
+              <a href={MAIL_TO} target="_blank" rel="noopener noreferrer">
+                {MAIL}
+              </a>
+            </span>
+          </span>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <div class="flex space-between">
+        <p>{COPYRIGHT}</p>
+        <p>{YEAR}</p>
+      </div>
+    </footer>
   </body>
 </html>
+
+<style>
+  body {
+    max-width: 375px;
+    margin: 32rem auto 4rem auto;
+    padding: 0 2rem;
+    font-family:
+      Ubuntu Mono,
+      monospace;
+    line-height: 1.25;
+    color: #404040;
+  }
+  a {
+    font-weight: 700;
+    color: #4d7c0f;
+  }
+  section {
+    margin: 4rem 0;
+  }
+  footer {
+    margin: 16rem 0 0 0;
+    color: #737373;
+  }
+  .flex {
+    display: flex;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
+</style>
