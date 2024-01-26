@@ -3,18 +3,24 @@ import {
   AWARDS,
   COPYRIGHT,
   DESC,
+  DOMAIN,
   EXPERIENCES,
   FAQS,
+  FAVICON,
+  FULL_DOMIAN,
   GREETINGS,
   HASHNODE,
   MAIL,
   MAIL_TO,
   MORE_QUESTIONS,
+  OG_TYPE,
   PIXEL_PERFECT,
   PROJECTS,
   SKILLS,
   SOCIALS,
+  THUMB,
   TITLE,
+  TWITTER_CARD,
   USERNAME,
   YEAR,
 } from "@/constants/data";
@@ -26,7 +32,22 @@ import {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{TITLE}</title>
+    <meta name="description" content={DESC} />
+    <link rel="icon" type="image/svg+xml" href={FAVICON} />
+
+    <meta property="og:url" content={FULL_DOMIAN} />
+    <meta property="og:type" content={OG_TYPE} />
+    <meta property="og:title" content={TITLE} />
+    <meta property="og:description" content={DESC} />
+    <meta property="og:image" content={THUMB} />
+
+    <meta name="twitter:card" content={TWITTER_CARD} />
+    <meta property="twitter:domain" content={DOMAIN} />
+    <meta property="twitter:url" content={FULL_DOMIAN} />
+    <meta property="twitter:title" content={TITLE} />
+    <meta property="twitter:description" content={DESC} />
+    <meta property="twitter:image" content={THUMB} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,16 +57,12 @@ import {
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-
     <noscript>
       <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap"
         rel="stylesheet"
       />
     </noscript>
-
-    <title>{TITLE}</title>
-    <meta name="description" content={DESC} />
   </head>
 
   <body>
