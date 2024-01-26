@@ -99,7 +99,7 @@ export const CODEPEN = {
 };
 
 export const TWITTER = {
-  LABEL: "Twitter (Blog)",
+  LABEL: "Twitter",
   LINK: "https://www.twitter.com/pulpmint",
 };
 
