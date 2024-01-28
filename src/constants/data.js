@@ -51,7 +51,7 @@ export const PROJECTS = [DANPEN, TWITTER_GEMS, COFFEE_HOURS, RIVI];
 
 export const EXPERIENCES = [
   {
-    DESG: "Full Stack Developer",
+    DESG: "Frontend Developer",
     LABEL: "PayU",
     YEAR: "2023 - ....",
   },
