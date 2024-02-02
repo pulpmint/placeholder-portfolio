@@ -1,6 +1,7 @@
 ---
 import {
   AWARDS,
+  CANONICAL_HOME,
   COPYRIGHT,
   DESC,
   DOMAIN,
@@ -37,6 +38,8 @@ import {
     <title>{TITLE}</title>
     <meta name="description" content={DESC} />
     <link rel="icon" type="image/svg+xml" href={FAVICON} />
+
+    <link rel="canonical" href={CANONICAL_HOME} />
 
     <meta property="og:url" content={FULL_DOMIAN} />
     <meta property="og:type" content={OG_TYPE} />
