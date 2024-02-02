@@ -1,8 +1,10 @@
 export const DOMAIN = "manmohansingh.dev";
 export const FULL_DOMIAN = `https://${DOMAIN}`;
 
-export const FAVICON = "/favicon.svg";
-export const THUMB = "/og-image.png";
+export const CANONICAL_HOME = `${FULL_DOMIAN}/`;
+
+export const FAVICON = `${FULL_DOMIAN}/favicon.svg`;
+export const THUMB = `${FULL_DOMIAN}/og-image.png`;
 
 export const OG_TYPE = "portfolio";
 export const TWITTER_CARD = "summary_large_image";
