@@ -20,7 +20,8 @@ export const TAGLINE = "Building things for the Web";
 export const TITLE = `${NAME} - ${TAGLINE}`;
 export const DESC = `A web developer based in India. Working with JavaScript & Figma. ${TAGLINE}.`;
 
-export const GREETINGS = `Hey there! I am ${NAME}.`;
+export const HELLO = 'Hello!'
+export const GREETINGS = `I am ${NAME}.`;
 
 export const PIXEL_PERFECT =
   "Crafting pixel-perfect, secure & performant web experiences with great attention to detail.";
@@ -134,5 +135,5 @@ export const FAQS = [
 
 export const MORE_QUESTIONS = "Have more questions?";
 
-export const COPYRIGHT = `🧙‍♂️ • Design & Code • Manmohan Singh`;
-export const YEAR = 2024;
+export const COPYRIGHT = "🧙‍♂️ Design & Code • Manmohan Singh";
+export const YEAR = new Date().getFullYear();

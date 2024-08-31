@@ -11,6 +11,7 @@ import {
   FULL_DOMIAN,
   GREETINGS,
   HASHNODE,
+  HELLO,
   MAIL,
   MAIL_TO,
   MORE_QUESTIONS,
@@ -54,7 +55,7 @@ import {
     <meta property="twitter:description" content={DESC} />
     <meta property="twitter:image" content={THUMB} />
 
-    <meta name="theme-color" content="#4d7c0f" />
+    <meta name="theme-color" content="#537653" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,10 +63,18 @@ import {
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
+      <center>
+        <h1 class="my-12">{HELLO}</h1>
+      </center>
+
       <h3>👤 ABOUT</h3>
       <hr />
       <p>
@@ -102,7 +111,7 @@ import {
       </section>
 
       <section>
-        <h4>💼 EXPERIENCES</h4>
+        <h3>💼 EXPERIENCES</h3>
         <hr />
         {
           EXPERIENCES.map(({ DESG, LABEL, YEAR }) => (
@@ -119,7 +128,7 @@ import {
       </section>
 
       <section>
-        <h4>🏆 AWARDS & RECOGNITION</h4>
+        <h3>🏆 AWARDS & RECOGNITION</h3>
         <hr />
         {
           AWARDS.map(({ AWARD, LABEL, LINK, YEAR }) => (
@@ -139,13 +148,13 @@ import {
       </section>
 
       <section>
-        <h4>🔨 SKILLS</h4>
+        <h3>🔨 SKILLS</h3>
         <hr />
         {SKILLS.map((skill) => <p>- {skill}</p>)}
       </section>
 
       <section>
-        <h4>🌐 SOCIALS</h4>
+        <h3>🌐 SOCIALS</h3>
         <hr />
         {
           SOCIALS.map(({ LABEL, LINK }) => (
@@ -160,7 +169,7 @@ import {
       </section>
 
       <section>
-        <h4>🙋 FAQS</h4>
+        <h3>🙋 FAQS</h3>
         <hr />
         {
           FAQS.map(({ q, a }) => (
@@ -206,23 +215,43 @@ import {
 <style>
   body {
     max-width: 375px;
-    margin: 32rem auto 4rem auto;
-    padding: 0 2rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
     font-family:
       Ubuntu Mono,
       monospace;
     line-height: 1.25;
     color: #404040;
+    background: repeating-linear-gradient(
+      #f5f5f5 0px,
+      #f5f5f5 1px,
+      #fafafa 1px,
+      #fafafa 5px
+    );
+  }
+  h1 {
+    font-family: "VT323", monospace;
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  h3 {
+    font-family: "VT323", monospace;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
   a {
     font-weight: 700;
-    color: #4d7c0f;
+    color: #749473;
+  }
+  a:hover {
+    background-color: #e3eae1;
   }
   section {
     margin: 4rem 0;
   }
   footer {
     margin: 16rem 0 0 0;
+    font-family: "VT323", monospace;
     color: #737373;
   }
   .flex {
@@ -230,5 +259,9 @@ import {
   }
   .space-between {
     justify-content: space-between;
+  }
+  .my-12 {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
   }
 </style>
