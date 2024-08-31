@@ -1,10 +1,11 @@
 export const DOMAIN = "manmohansingh.dev";
-export const FULL_DOMIAN = `https://${DOMAIN}`;
+export const FULL_DOMAIN = `https://${DOMAIN}`;
+export const FULL_WWW_DOMAIN = `https://www.${DOMAIN}`;
 
-export const CANONICAL_HOME = `${FULL_DOMIAN}/`;
+export const CANONICAL_HOME = `${FULL_DOMAIN}/`;
 
-export const FAVICON = `${FULL_DOMIAN}/favicon.svg`;
-export const THUMB = `${FULL_DOMIAN}/og-image.png`;
+export const FAVICON = `${FULL_WWW_DOMAIN}/favicon.svg`;
+export const THUMB = `${FULL_WWW_DOMAIN}/og-image.png`;
 
 export const OG_TYPE = "portfolio";
 export const TWITTER_CARD = "summary_large_image";
@@ -20,7 +21,7 @@ export const TAGLINE = "Building things for the Web";
 export const TITLE = `${NAME} - ${TAGLINE}`;
 export const DESC = `A web developer based in India. Working with JavaScript & Figma. ${TAGLINE}.`;
 
-export const HELLO = 'Hello!'
+export const HELLO = 'Hello!';
 export const GREETINGS = `I am ${NAME}.`;
 
 export const PIXEL_PERFECT =
