@@ -18,14 +18,16 @@ export const USERNAME = "pulpmint";
 export const NAME = "Manmohan Singh";
 export const TAGLINE = "Building things for the Web";
 
+export const PIXEL_PERFECT =
+  "Crafting smooth, secure and pixel-perfect web experiences with great attention to detail.";
+
 export const TITLE = `${NAME} - ${TAGLINE}`;
-export const DESC = `A web developer based in India. Working with JavaScript & Figma. ${TAGLINE}.`;
+export const DESC = "A web developer based in India. Working with JavaScript & Figma.";
+
+export const META_DESC = `${DESC} ${PIXEL_PERFECT}`;
 
 export const HELLO = 'Hello!';
 export const GREETINGS = `I am ${NAME}.`;
-
-export const PIXEL_PERFECT =
-  "Crafting pixel-perfect, secure & performant web experiences with great attention to detail.";
 
 export const DANPEN = {
   LABEL: "Danpen",
